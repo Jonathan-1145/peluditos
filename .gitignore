@@ -1,0 +1,58 @@
+# Entorno virtual
+venv/
+ENV/
+env/
+.venv/
+
+# Archivos de configuración sensibles
+.env
+*.env
+
+# Archivos de compilación de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyd
+*.pyo
+
+# Archivos temporales o de caché
+*.log
+*.tmp
+*.temp
+*.cache/
+.cache/
+
+# Archivos de bases de datos locales
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# Archivos de sistema / IDEs
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Salidas y backups
+*.bak
+*.old
+
+# Archivos de pruebas/coverage
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Archivos generados por pip
+pip-wheel-metadata/
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Archivos de despliegue o empaquetado
+*.tar.gz
+*.zip
