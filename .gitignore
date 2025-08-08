@@ -56,3 +56,6 @@ build/
 # Archivos de despliegue o empaquetado
 *.tar.gz
 *.zip
+
+# Creación de datos en la base de datos
+datos_database.py
