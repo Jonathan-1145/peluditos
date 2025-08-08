@@ -8,7 +8,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-app = Flask(__name__)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+app = Flask(__name__, template_folder=os.path.join(BASE_DIR, 'templates'))
 app.secret_key = os.environ.get("SECRET_KEY", secrets.token_hex(16))
 app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(seconds=60)
 
