@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body id="login">
-    <h2>Inicia sesión en Peluditos</h2>
+    <h2>Inicia Sesión en Peluditos</h2>
 
     <main id="caja_ppal">
         <section id="cont_logo">
-            <figure id="marca"></figure>
+            <figure id="marca">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de Peluditos">
+            </figure>
         </section>
 
         {% if error %}
