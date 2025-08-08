@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body id="login">
-    <h2>Inicia Sesión en Peluditos</h2>
-
+    
     <main id="caja_ppal">
+        <h2>Inicio de Sesión en Peluditos</h2>
         <section id="cont_logo">
             <figure id="marca">
                 <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de Peluditos">
@@ -35,7 +35,7 @@
         {% if error %}
             <p style="color: red; font-weight: bold;">{{ error }}</p>
         {% endif %}
-        
+
     </main>
 </body>
 </html>

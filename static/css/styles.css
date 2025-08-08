@@ -40,9 +40,8 @@
 }
 
 #login #marca img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
 }
 
