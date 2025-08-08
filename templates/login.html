@@ -1,18 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Iniciar sesión - Peluditos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <form action="{{ url_for('login') }}" method="post">
-        <label for="usuario">Usuario</label>
-        <input type="text" name="usuario" id="usuario" required>
-        <label for="clave">Contraseña</label>
-        <input type="password" name="clave" id="clave" required>
-        <button type="submit">Iniciar sesión</button>
-        {% if error %}<p style="color:red">{{ error }}</p>{% endif %}
-    </form>
+    <h2>Inicia sesión en Peluditos</h2>
+
+    <main id="caja_ppal">
+        <section id="cont_logo">
+            <figure id="marca"></figure>
+        </section>
+
+        {% if error %}
+            <p style="color: red; font-weight: bold;">{{ error }}</p>
+        {% endif %}
+
+        <form action="{{ url_for('login') }}" method="post">
+            <label for="usuario">Usuario</label>
+            <input type="text" name="usuario" id="usuario"
+                maxlength="25" minlength="3"
+                title="¡ERROR! Parece que ingresaste un nombre de usuario incorrecto. Inténtalo de nuevo."
+                required tabindex="1">
+
+            <label for="clave">Contraseña</label>
+            <input type="password" name="clave" id="clave"
+                maxlength="18" minlength="5"
+                title="¡UPS! Contraseña incorrecta. Inténtalo de nuevo."
+                required tabindex="2">
+
+            <button type="submit">ENVIAR</button>
+        </form>
+    </main>
 </body>
 </html>
