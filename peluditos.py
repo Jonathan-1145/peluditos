@@ -1,21 +1,23 @@
-from datetime import timedelta
-from random import randint
-from flask import Flask, redirect, render_template, request, session
-import mysql.connector
-import hashlib
-import secrets
 import os
+import mysql.connector
+import secrets
+from datetime import timedelta
+from flask import Flask, redirect, render_template, request, session
+import hashlib
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = secrets.token_hex(16)
+app.secret_key = os.environ.get("SECRET_KEY", secrets.token_hex(16))
 app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(seconds=60)
 
 bddPeluditos = mysql.connector.connect(
-    host="localhost",
-    port="3306",
-    user="root",
-    password="",
-    database="peluditos"
+    host=os.environ.get("DB_HOST").split(":")[0],
+    port=int(os.environ.get("DB_HOST").split(":")[1]),
+    user=os.environ.get("DB_USER"),
+    password=os.environ.get("DB_PASSWORD"),
+    database=os.environ.get("DB_NAME")
 )
 cursorPeludito = bddPeluditos.cursor()
 
