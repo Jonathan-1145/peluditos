@@ -3,7 +3,7 @@
     ========================= */
 #login {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    background: linear-gradient(135deg, #fefaf6, #f9f5ef);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -11,22 +11,22 @@
     justify-content: center;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #4a3522;
 }
 
 #login h2 {
     margin-bottom: 1rem;
     font-size: 1.8rem;
-    color: #444;
+    color: #5a3b24;
     text-align: center;
 }
 
 /* Caja principal */
 #login #caja_ppal {
-    background: #ffffff;
+    background: #fffdf8;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(74, 53, 34, 0.15);
     width: 100%;
     max-width: 380px;
     box-sizing: border-box;
@@ -48,8 +48,8 @@
 
 /* Mensaje de error */
 #login p {
-    background-color: #ffe5e5;
-    color: #b30000;
+    background-color: #ffe8e0;
+    color: #a33100;
     padding: 0.75rem;
     border-radius: 6px;
     font-weight: bold;
@@ -67,27 +67,28 @@
     margin-bottom: 0.3rem;
     font-size: 0.9rem;
     font-weight: bold;
-    color: #555;
+    color: #5a3b24;
 }
 
 #login input {
     padding: 0.6rem 0.8rem;
     margin-bottom: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #c7b9aa;
     border-radius: 6px;
     font-size: 1rem;
     transition: all 0.2s ease-in-out;
+    background-color: #fffdf8;
 }
 
 #login input:focus {
-    border-color: #4a90e2;
-    box-shadow: 0 0 5px rgba(74, 144, 226, 0.4);
+    border-color: #d88a2b;
+    box-shadow: 0 0 5px rgba(216, 138, 43, 0.4);
     outline: none;
 }
 
 /* Botón */
 #login button {
-    background-color: #4a90e2;
+    background-color: #d88a2b;
     color: white;
     padding: 0.7rem;
     border: none;
@@ -99,9 +100,9 @@
 }
 
 #login button:hover {
-    background-color: #3a78c2;
+    background-color: #b46d1f;
     transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(74, 53, 34, 0.15);
 }
 
 /* Responsive */
