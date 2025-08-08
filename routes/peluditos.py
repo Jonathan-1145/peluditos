@@ -25,6 +25,13 @@ def get_db():
     )
 
 # --------------------
+# Ruta raíz / Health check
+# --------------------
+@app.route("/", methods=["GET", "HEAD"])
+def root():
+    return redirect(url_for("login"))
+
+# --------------------
 # Login
 # --------------------
 @app.route('/login', methods=['GET', 'POST'])
