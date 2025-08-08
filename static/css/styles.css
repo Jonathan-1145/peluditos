@@ -1,0 +1,116 @@
+/* =========================
+    Login
+    ========================= */
+#login {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+#login h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #444;
+    text-align: center;
+}
+
+/* Caja principal */
+#login #caja_ppal {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
+}
+
+/* Logo */
+#login #cont_logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+#login #marca {
+    width: 80px;
+    height: 80px;
+    background: url('../static/logo.png') center/contain no-repeat;
+    border-radius: 50%;
+}
+
+/* Mensaje de error */
+#login p {
+    background-color: #ffe5e5;
+    color: #b30000;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Formulario */
+#login form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login label {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+}
+
+#login input {
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+#login input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.4);
+    outline: none;
+}
+
+/* Botón */
+#login button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#login button:hover {
+    background-color: #3a78c2;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    #login #caja_ppal {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+    #login h2 {
+        font-size: 1.5rem;
+    }
+}
