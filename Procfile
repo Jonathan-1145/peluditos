@@ -1,1 +1,1 @@
-web: gunicorn peluditos:app --bind 0.0.0.0:$PORT
+web: gunicorn routes.peluditos:app --bind 0.0.0.0:$PORT
