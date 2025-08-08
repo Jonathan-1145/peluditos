@@ -36,12 +36,13 @@
 #login #cont_logo {
     display: flex;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 #login #marca img {
-    width: 150px;
+    width: auto;
     height: 150px;
+    border-radius: 18px;
     object-fit: contain;
 }
 
