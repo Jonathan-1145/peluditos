@@ -3,10 +3,11 @@ from random import randint
 from flask import Flask, redirect, render_template, request, session
 import mysql.connector
 import hashlib
+import secrets
 import os
 
 app = Flask(__name__)
-app.secret_key = str(randint(100000, 99999))
+app.secret_key = secrets.token_hex(16)
 app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(seconds=60)
 
 bddPeluditos = mysql.connector.connect(
